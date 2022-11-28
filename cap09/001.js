@@ -1,9 +1,13 @@
-var segredo = Math.round(Math.random()*10);
+// var segredo1 = Math.round(Math.random()*10);
+
+var segredo = [1,9,3,7]
 
 var input = document.querySelector("input");
 
 function verifica() {
-    if (input.value == segredo) {
+    const procura = segredo.indexOf(parseInt(input.value));
+
+    if (procura >= 0) {
         alert("Você ACERTOU");
     } else {
         alert("Você errou!");
